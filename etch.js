@@ -1,14 +1,26 @@
 // Add Event Listeners here:
-
-
+'use strict';
+function cellActive(){
+    $('.cell').hover(function(){
+        $(this).addClass("active");
+    })
+}
+function clearGrid(){
+    $('.controls').on('click', function(){
+        createAndPlaceRows(8);
+    });
+}
 // When DOM is ready:
-$(() => {
+function main(){
     createAndPlaceRows(8);
-  
+    cellActive();
+    clearGrid();
+  //change the class when hover
+  //clicks grid, grid should reset all
     // Bind your event listeners here:
-  });
+  };
   
-  
+  $(main);
   
   
   
